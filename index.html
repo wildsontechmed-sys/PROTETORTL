@@ -160,7 +160,6 @@
   const wait=ms=>new Promise(r=>setTimeout(r,ms));
   const flash=()=>{F.classList.remove('go');void F.offsetWidth;F.classList.add('go')};
   (async()=>{
-    if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
     for(;;){
       await wait(3500);                        // logo centralizado
       flash();S.classList.add('mode');X.classList.add('on');run(1);   // logo -> carrinho Dräger
@@ -173,3 +172,4 @@
 </script>
 </body>
 </html>
+      
